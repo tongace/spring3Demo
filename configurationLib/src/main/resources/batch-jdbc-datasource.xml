@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="dataSource_bfw" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close" p:driverClassName="${jdbc.driverClassName}"
+		p:jdbcUrl="${bfw.jdbc.url}" p:username="${bfw.jdbc.username}" p:password="${bfw.jdbc.password}" 
+		p:maximumPoolSize="${jdbc.maximumPoolSize}"/>
+		
+	<bean id="entityManagerFactory_bfw"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		p:dataSource-ref="dataSource_bfw">
+		<qualifier value="dataSource_bfw" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
+				p:database="${jpa.database}" p:showSql="${jpa.showSql}" />
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+			</props>
+		</property>
+		<!-- BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit 
+			will win -->
+		<property name="persistenceUnitName" value="st3main_bfw" />
+		<property name="packagesToScan" value="th.co.toyota.st3.api.model" />
+	</bean>
+	<bean id="transactionManager_bfw" class="org.springframework.orm.jpa.JpaTransactionManager"
+		p:entityManagerFactory-ref="entityManagerFactory_bfw">
+		<qualifier value="entityManagerFactory_bfw" />
+	</bean>	
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+</beans>

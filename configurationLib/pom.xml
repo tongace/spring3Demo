@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.dxc.application</groupId>
+		<artifactId>spring3Demo</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>configurationLib</artifactId>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.7</java.version>
+	</properties>
+	<dependencies>
+	</dependencies>
+	<!-- Profiles configuration -->
+	<profiles>
+		<profile>
+			<id>OFFLINE</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- spring active profile -->
+				<spring.profiles.active>OFFLINE</spring.profiles.active>
+				<!-- log -->
+				<log.path>/home/chairat</log.path>
+				<log.level>DEBUG</log.level>
+				<!-- SC2 client properties -->
+				<sc2client.systemDn>DXC.tmap-em.toyota.co.th.asia</sc2client.systemDn>
+				<sc2client.applicationHomeUrl>https://localhost:9080/demo/home</sc2client.applicationHomeUrl>
+				<sc2client.rest.rootServiceUrl>http://localhost/main/</sc2client.rest.rootServiceUrl>
+				<sc2client.rest.resource.userInfo>simple/authorize/user/ticket/{ticketId}/</sc2client.rest.resource.userInfo>
+				<sc2client.rest.resource.systemAcl>simple/authorize/systems/ticket/{ticketId}/system/{systemDn}/</sc2client.rest.resource.systemAcl>
+				<sc2client.sc2.home.url>http://localhost/</sc2client.sc2.home.url>
+				<sc2client.cas.logout.url>https://localhost/cas/logout</sc2client.cas.logout.url>
+				<!-- SC2 filter properties -->
+				<sc2filter.casServerUrlPrefix>http://localhost:8080/cas</sc2filter.casServerUrlPrefix>
+				<sc2filter.casServerLoginUrl>http://localhost:8080/cas/login</sc2filter.casServerLoginUrl>
+				<sc2filter.serverName>http://localhost:8080</sc2filter.serverName>
+				<!-- standard properties -->
+				<standard.projectCode>DXC</standard.projectCode>
+				<standard.homepath>/home/chairat</standard.homepath>
+				<standard.mail.smtp.host>172.26.8.14</standard.mail.smtp.host>
+				<standard.mail.fromemail>espi_dev@tdem.toyota-asia.com</standard.mail.fromemail>
+				<standard.mail.toemail>chairat_sam_hp@tdem.toyota-asia.com</standard.mail.toemail>
+				<standard.mail.ccemail></standard.mail.ccemail>
+				<!-- database -->
+				<database.jdbc.driverClassName>oracle.jdbc.OracleDriver</database.jdbc.driverClassName>
+				<database.jdbc.maximumPoolSize>2</database.jdbc.maximumPoolSize>
+				<database.jdbc.url>jdbc:oracle:thin:@10.254.245.76:8521:XE</database.jdbc.url>
+				<database.jdbc.username>BX0USER01</database.jdbc.username>
+				<database.jdbc.password>bx0user01espi</database.jdbc.password>
+				<database.bfw.jdbc.url>jdbc:oracle:thin:@10.254.245.76:8521:XE</database.bfw.jdbc.url>
+				<database.bfw.jdbc.username>BFWUSER01</database.bfw.jdbc.username>
+				<database.bfw.jdbc.password>BFWUSER01</database.bfw.jdbc.password>
+				<database.hibernate.dialect>org.hibernate.dialect.Oracle10gDialect</database.hibernate.dialect>
+				<database.jpa.database>ORACLE</database.jpa.database>
+				<database.jpa.showSql>true</database.jpa.showSql>
+			</properties>
+		</profile>
+		<profile>
+			<id>ONLINE</id>
+			<!-- The development profile is active by default -->
+			<!-- <activation> <activeByDefault>true</activeByDefault> </activation> -->
+			<properties>
+				<!-- spring active profile -->
+				<spring.profiles.active>OFFLINE</spring.profiles.active>
+				<log.path>/home/chairat</log.path>
+				<log.level>DEBUG</log.level>
+				<!-- SC2 client properties -->
+				<sc2client.systemDn>DXC.tmap-em.toyota.co.th.asia</sc2client.systemDn>
+				<sc2client.applicationHomeUrl>http://10.254.168.150:8080/demo/home</sc2client.applicationHomeUrl>
+				<sc2client.rest.rootServiceUrl>http://sc2-dev.tmap-em.toyota-asia.com/main/</sc2client.rest.rootServiceUrl>
+				<sc2client.rest.resource.userInfo>simple/authorize/user/ticket/{ticketId}</sc2client.rest.resource.userInfo>
+				<sc2client.rest.resource.systemAcl>simple/authorize/systems/ticket/{ticketId}/system/{systemDn}</sc2client.rest.resource.systemAcl>
+				<sc2client.sc2.home.url>http://sc2-dev.tmap-em.toyota-asia.com/</sc2client.sc2.home.url>
+				<sc2client.cas.logout.url>https://sc2-dev.tmap-em.toyota-asia.com/cas/logout</sc2client.cas.logout.url>
+				<!-- SC2 filter properties -->
+				<sc2filter.casServerUrlPrefix>http://sc2-dev.tmap-em.toyota-asia.com/cas</sc2filter.casServerUrlPrefix>
+				<sc2filter.casServerLoginUrl>https://sc2-dev.tmap-em.toyota-asia.com/cas/login</sc2filter.casServerLoginUrl>
+				<sc2filter.serverName>http://10.254.168.150:8080</sc2filter.serverName>
+				<!-- standard properties -->
+				<standard.projectCode>DXC</standard.projectCode>
+				<standard.homepath>/home/chairat</standard.homepath>
+				<standard.mail.smtp.host>172.26.8.14</standard.mail.smtp.host>
+				<standard.mail.fromemail>dxc_dev@tdem.toyota-asia.com</standard.mail.fromemail>
+				<standard.mail.toemail>chairat_sam_hp@tdem.toyota-asia.com</standard.mail.toemail>
+				<standard.mail.ccemail></standard.mail.ccemail>
+				<!-- database -->
+				<database.jdbc.driverClassName>oracle.jdbc.OracleDriver</database.jdbc.driverClassName>
+				<database.jdbc.maximumPoolSize>2</database.jdbc.maximumPoolSize>
+				<database.jdbc.url>jdbc:oracle:thin:@10.254.245.76:8521:XE</database.jdbc.url>
+				<database.jdbc.username>BX0USER01</database.jdbc.username>
+				<database.jdbc.password>bx0user01espi</database.jdbc.password>
+				<database.bfw.jdbc.url>jdbc:oracle:thin:@10.254.245.76:8521:XE</database.bfw.jdbc.url>
+				<database.bfw.jdbc.username>BFWUSER01</database.bfw.jdbc.username>
+				<database.bfw.jdbc.password>BFWUSER01</database.bfw.jdbc.password>
+				<database.hibernate.dialect>org.hibernate.dialect.Oracle10gDialect</database.hibernate.dialect>
+				<database.jpa.database>ORACLE</database.jpa.database>
+				<database.jpa.showSql>true</database.jpa.showSql>
+			</properties>
+		</profile>
+	</profiles>
+	<!-- end Profiles configuration -->
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimiter>@</delimiter>
+					</delimiters>
+					<useDefaultDelimiters>false</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>
