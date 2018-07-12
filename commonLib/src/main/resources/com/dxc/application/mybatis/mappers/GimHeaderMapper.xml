@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dxc.application.mybatis.mappers.GimHeaderMapper">
+	<select id="selectAllGimHeader" resultType="com.dxc.application.model.GimHeader">
+		SELECT * FROM TB_M_GIM_H
+	</select>
+	<select id="selectGimHeaderByGimType" resultType="com.dxc.application.model.GimHeader" parameterType="com.dxc.application.model.GimHeader">
+		SELECT * FROM TB_M_GIM_H WHERE GIM_TYPE= #{gimType}
+	</select>
+	<insert id="save" parameterType="com.dxc.application.model.GimHeader">
+		insert into TB_M_GIM_H (GIM_TYPE,GIM_DESC,CD_LENGTH,FIELD1_LABEL,FIELD2_LABEL,FIELD3_LABEL,ACTIVE_FLAG,CREATED_BY,CREATED_DT,MODIFIED_BY,MODIFIED_DT) 
+		values (#{gimType},#{gimDesc},#{cdLength},#{field1Label},#{field2Label},#{field3Label},#{activeFlag},#{createdBy},#{createdDt},#{modifiedBy},#{modifiedDt});
+	</insert>
+</mapper>

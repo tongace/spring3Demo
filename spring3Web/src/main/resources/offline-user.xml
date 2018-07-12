@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<userInfo userId="user0105" ticketId="testTicketId">
+	<firstName>ISUser05</firstName>
+	<lastName>System</lastName>
+	<company>TOYOTA</company>
+	<companyType>CO</companyType>
+	<department>SD1</department>
+	<division>IS</division>
+	<email>chairat_sam@tmap-em.toyota-asia.com</email>
+	<employeeNo>ISUser05</employeeNo>
+	<location>TMAP-EM</location>
+	<section>Programmer</section>
+	<telephoneNumber>7410</telephoneNumber>
+	<title>Pseudo Employee</title>
+</userInfo>
+
+
+<!-- <userInfo userId="user3101" ticketId="testTicketId"> -->
+<!-- 	<firstName>SUPPLIER</firstName> -->
+<!-- 	<lastName>DENSO</lastName> -->
+<!-- 	<company>DITH</company> -->
+<!-- 	<companyType>SUPPLIER</companyType> -->
+<!-- 	<department>DP</department> -->
+<!-- 	<division>DV</division> -->
+<!-- 	<email>supplier@denso.co.th</email> -->
+<!-- 	<employeeNo>69</employeeNo> -->
+<!-- 	<location>DITHA</location> -->
+<!-- 	<section>DS</section> -->
+<!-- 	<telephoneNumber>021234567</telephoneNumber> -->
+<!-- 	<title>Supplier</title> -->
+<!-- </userInfo> -->

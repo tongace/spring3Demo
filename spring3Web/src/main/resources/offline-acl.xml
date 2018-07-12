@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<systemInfo systemDn="bx0.tmap-em.toyota.co.th.asia">
+	<role>ADMIN.tmap-em.toyota.co.th.asia</role>
+
+	<!-- maintenance -->
+	<functionInfo group="BX0001" functionId="BX0121">
+		<screenInfo screenId="WBX01211" screenResource="/maintenance/homemaintenance">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0122">
+		<screenInfo screenId="WBX01221" screenResource="/maintenance/supplierkpiset">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0123">
+		<screenInfo screenId="WBX01231" screenResource="/maintenance/calculationformulamaster">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0124">
+		<screenInfo screenId="WBX01241" screenResource="/maintenance/suppliermaster">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0125">
+		<screenInfo screenId="WBX01251" screenResource="/maintenance/usermaster">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0126">
+		<screenInfo screenId="WBX01261" screenResource="/maintenance/toyotasuppliermap">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0127">
+		<screenInfo screenId="WBX01271" screenResource="/maintenance/excelupload">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0001" functionId="BX0128">
+		<screenInfo screenId="WBX01281" screenResource="/maintenance/gimmaster">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- end maintenance -->
+	<!-- 	common -->
+	<functionInfo group="BX0002" functionId="BX0111">
+		<screenInfo screenId="WBX01111" screenResource="home">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0002" functionId="BX0132">
+		<screenInfo screenId="WBX01321" screenResource="/common/generatereport">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0002" functionId="ST3000">
+		<screenInfo screenId="WST30000" screenResource="/layout">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- 	end common -->
+	<!-- 	daily follow up -->
+	<functionInfo group="BX0003" functionId="BX0131">
+		<screenInfo screenId="WBX01311" screenResource="/dailyfollowup/tasklist">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0135">
+		<screenInfo screenId="WBX01351" screenResource="/dailyfollowup/deliveryproblemfollowup">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0136">
+		<screenInfo screenId="WBX01361" screenResource="/dailyfollowup/qualityproblemfollowup">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0137">
+		<screenInfo screenId="WBX01371" screenResource="/dailyfollowup/safetyproblemfollowup">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0138">
+		<screenInfo screenId="WBX01381" screenResource="/dailyfollowup/ai">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0139">
+		<screenInfo screenId="WBX01391" screenResource="/dailyfollowup/partpreparationproblemfollowup">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0003" functionId="BX0133">
+		<screenInfo screenId="WBX01331" screenResource="/overallstatusreport">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- 	end daily follow up -->
+	<!--  KPI Checkpoint BMC -->
+	<functionInfo group="BX0003" functionId="BX013F">
+		<screenInfo screenId="WBX013F1" screenResource="/kpicheckpoint">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- 	end KPI Checkpoint BMC -->
+	<!-- 	performance management -->
+	<functionInfo group="BX0004" functionId="BX0134">
+		<screenInfo screenId="WBX01341" screenResource="/ope">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0004" functionId="BX013C">
+		<screenInfo screenId="WBX013C1" screenResource="/dailyfollowup/mps">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0004" functionId="BX013B">
+		<screenInfo screenId="WBX013B1" screenResource="/dailyfollowup/mpq">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0004" functionId="BX013A">
+		<screenInfo screenId="WBX013A1" screenResource="/dailyfollowup/mpd">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0004" functionId="BX013D">
+		<screenInfo screenId="WBX013D1" screenResource="/dailyfollowup/activityassignment">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- 	end performance management -->
+	
+	<functionInfo group="BX0001" functionId="BX013E">
+		<screenInfo screenId="WBX013E1" screenResource="/maintenance/summarydrm">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<!-- End -->
+	<functionInfo group="BX0005" functionId="BX013F">
+		<screenInfo screenId="WBX013F1" screenResource="/kpicheckpointbenchmark">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0005" functionId="BX013G">
+		<screenInfo screenId="WBX013G1" screenResource="kpicheckpointsummary">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="BX0005" functionId="BX013H">
+		<screenInfo screenId="WBX013H1" screenResource="mpreportapproval">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	
+	<functionInfo group="ST3001" functionId="ST3304">
+		<screenInfo screenId="WST33040" screenResource="batchManagementList">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	
+	<functionInfo group="ST3002" subGroup="ST30021" functionId="ST3301">
+		<screenInfo screenId="WST33010" screenResource="logMonitoring">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+	<functionInfo group="ST3002" subGroup="ST30021" functionId="ST3302">
+		<screenInfo screenId="WST33020" screenResource="excelDownloadMonitoring">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+		<screenInfo screenId="WST33022" screenResource="excelDownloadMonitoringMiniList">
+			<buttonInfo buttonId="WBX00000Dump" accessRight="1" />
+		</screenInfo>
+	</functionInfo>
+</systemInfo>

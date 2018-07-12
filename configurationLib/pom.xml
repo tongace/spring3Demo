@@ -70,7 +70,7 @@
 			<!-- <activation> <activeByDefault>true</activeByDefault> </activation> -->
 			<properties>
 				<!-- spring active profile -->
-				<spring.profiles.active>OFFLINE</spring.profiles.active>
+				<spring.profiles.active>ONLINE</spring.profiles.active>
 				<log.path>/home/chairat</log.path>
 				<log.level>DEBUG</log.level>
 				<!-- SC2 client properties -->
@@ -114,6 +114,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
 				<configuration>
 					<delimiters>
 						<delimiter>@</delimiter>
@@ -124,6 +125,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
